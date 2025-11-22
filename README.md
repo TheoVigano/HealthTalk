@@ -35,7 +35,7 @@ Após o cadastro, ele tem acesso a um menu que oferece:
 
 ## Objetivo do projeto
 
-O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo um primeiro ponto de apoio para pessoas que buscam orientação, conforto ou simplesmente alguém — ou algo — com quem conversar.
+O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo um primeiro ponto de apoio para pessoas que buscam orientação, conforto ou simplesmente alguém, ou algo, com quem conversar.
 
 ---
 
