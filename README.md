@@ -41,7 +41,7 @@ O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo u
 
 ## Autores
 
-**Theo Viganó** **Heitor Nunes Lopes** **Vitor Brito**
+**Theo Viganó**, **Heitor Nunes Lopes**, **Vitor Brito**
 
 ## Mentor
 
