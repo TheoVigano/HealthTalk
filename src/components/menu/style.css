@@ -1,0 +1,176 @@
+/* --- Variáveis CSS para Cores e Estilos --- */
+:root {
+    --color-primary: #00bcd4; /* Verde-água / Ciano (Cor principal da marca) */
+    --color-secondary: #008E83; /* Tom mais escuro para hover */
+    --color-background-start: #E8F8FF; /* Azul claro suave 1 */
+    --color-background-end: #F5FEFF; /* Azul/Branco quase transparente 2 */
+    --color-text-dark: #333333;
+    --color-text-light: #FFFFFF;
+    --color-border: #E0E0E0;
+    --menu-height: 80px;
+}
+
+/* --- Menu Container Global --- */
+.menu-container {
+    position: relative;
+    width: 100%;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Garante que o gradiente e o orb não vazem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+/* --- Gradiente de Fundo Animado (menu-bg) --- */
+.menu-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Duas vezes a largura para o movimento */
+    height: 100%;
+    background: linear-gradient(90deg, 
+        var(--color-background-start) 0%, 
+        var(--color-background-end) 50%, 
+        var(--color-background-start) 100%);
+    background-size: 200% 100%; /* Garante que o gradiente se estenda */
+    animation: gradient-scroll 30s linear infinite;
+    z-index: 1;
+}
+
+@keyframes gradient-scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Move o gradiente para a esquerda */
+    }
+}
+
+/* --- Conteúdo Principal (Centralizado sobre o gradiente) --- */
+.menu-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px; /* Limite de largura para desktop */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Espaça a logo da navegação */
+    align-items: center;
+}
+
+/* -------------------- LADO ESQUERDO (Logo + Saudação) -------------------- */
+.menu-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-primary); /* Fundo ciano para o ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 175, 160, 0.5); /* Brilho suave */
+}
+
+.logo-circle svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-light); /* Ícone branco */
+    stroke-width: 3;
+}
+
+.menu-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.1;
+}
+
+.greeting {
+    font-size: 0.85rem;
+    color: var(--color-text-dark);
+    font-weight: 500;
+}
+
+.user-name {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+
+/* -------------------- LADO DIREITO (Navegação) -------------------- */
+.menu-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    stroke-width: 2.5;
+    color: var(--color-text-dark);
+    transition: color 0.3s ease;
+}
+
+/* Estilo do Botão Ativo */
+.nav-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    box-shadow: 0 4px 10px rgba(0, 175, 160, 0.4);
+}
+
+.nav-btn.active svg {
+    color: var(--color-text-light);
+}
+
+/* Efeito Hover */
+.nav-btn:hover:not(.active) {
+    background-color: rgba(0, 175, 160, 0.1); /* Fundo ciano leve */
+    color: var(--color-primary);
+}
+
+.nav-btn:hover:not(.active) svg {
+    color: var(--color-primary);
+}
+
+/* Botão Sair (Logout) */
+.logout-btn {
+    border: 1px solid var(--color-border);
+}
+
+.logout-btn:hover {
+    background-color: #fcebeb !important;
+    color: #cc3333 !important;  
+}

@@ -1,0 +1,131 @@
+/* --- Variáveis CSS --- */
+:root {
+    --color-primary: #00bcd4;   
+    --color-background-soft: #E8F8FF;
+    --color-card-bg: #FFFFFF;    
+    --color-user-msg: #DCF8C6;   /* Cor de fundo para mensagens do usuário */
+    --color-bot-msg: #F0F0F0;    /* Cor de fundo para mensagens do bot */
+    --color-text-dark: #333333;
+    --color-border: #E0E0E0;
+}
+
+/* --- Container e Centralização --- */
+.chat-container {
+    background-color: var(--color-background-soft);
+    font-family: 'Montserrat', sans-serif; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- Card Principal (Janela do Chat) --- */
+.chat-card {
+    background-color: var(--color-card-bg);
+    width: 100%;
+    max-width: 600px; /* Largura ideal para um chat */
+    height: 80vh; /* Ocupa boa parte da altura da tela */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* --- Botão Voltar --- */
+.btn-voltar {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 15px 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.2s;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.btn-voltar:hover {
+    color: var(--color-secondary);
+}
+
+/* --- Área de Mensagens --- */
+.chat-mensagens {
+    flex-grow: 1; /* Ocupa todo o espaço vertical disponível */
+    padding: 20px;
+    overflow-y: auto; /* Permite rolar quando o chat estiver cheio */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre as mensagens */
+}
+
+/* Estilização básica das mensagens */
+.chat-mensagens > div {
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Mensagens do Usuário (Direita, Ciano/Verde-água) --- */
+.msg-user {
+    align-self: flex-end; /* Alinha à direita */
+    background-color: var(--color-primary);
+    color: var(--color-card-bg); /* Texto branco */
+    border-bottom-right-radius: 5px; /* Borda mais reta no canto */
+}
+
+/* --- Mensagens do Bot (Esquerda, Cinza Claro) --- */
+.msg-bot {
+    align-self: flex-start; /* Alinha à esquerda */
+    background-color: var(--color-bot-msg);
+    color: var(--color-text-dark);
+    border-bottom-left-radius: 5px; /* Borda mais reta no canto */
+}
+
+/* --- Formulário de Input --- */
+.chat-input {
+    display: flex;
+    padding: 15px 20px;
+    gap: 10px;
+    border-top: 1px solid var(--color-border);
+    background-color: #f9f9f9;
+}
+
+.chat-input input {
+    flex-grow: 1; /* Ocupa o máximo de espaço possível */
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 25px; /* Input arredondado (estilo de app) */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.chat-input input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 175, 160, 0.1);
+}
+
+.chat-input button {
+    background-color: var(--color-primary);
+    color: var(--color-card-bg);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.chat-input button:hover {
+    background-color: var(--color-secondary);
+}
+
+.chat-input button:active {
+    transform: scale(0.98);
+}
