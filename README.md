@@ -52,4 +52,4 @@ O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo u
 
 ## Mentor
 
-**Éder de Rosso**
+**Éder de Rosso** e **Vinícius Hiller**
