@@ -4,6 +4,13 @@
 
 HealthTalk é uma aplicação criada para auxiliar pessoas que enfrentam dificuldades relacionadas à saúde mental, oferecendo um espaço seguro para conversar com uma Inteligência Artificial que fornece apoio inicial, escuta ativa e orientações básicas.
 
+# Mídias
+
+<img src= "1.png">
+<img src= "2.png">
+<img src= "3.png">
+<img src= "4.png">
+
 Em um cenário onde a saúde mental é cada vez mais discutida, o HealthTalk surge como uma ferramenta acessível e intuitiva. O usuário realiza um cadastro simples informando:
 
 - Nome  
