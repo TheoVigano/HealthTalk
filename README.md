@@ -48,9 +48,11 @@ O HealthTalk tem como objetivo unir tecnologia e cuidado emocional, oferecendo u
 
 ## Autores
 
-**Theo Viganó**
+**Heitor Nunes Lopes**, **Theo Viganó**, **Vitor Brito**
 
-GitHub: https://github.com/TheoVigano
+---
 
+## Mentor
 
-Se quiser, posso adicionar instruções de instalação, badges, prints da interface ou uma versão em inglês.
+**Vinícius Hiller**
+
